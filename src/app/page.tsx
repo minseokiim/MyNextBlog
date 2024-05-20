@@ -1,3 +1,9 @@
+import Main from "@/components/Main";
+
 export default function Home() {
-  return <section className="bg-gray-500">MAIN</section>;
+  return (
+    <section className="flex flex-col ">
+      <Main />
+    </section>
+  );
 }
