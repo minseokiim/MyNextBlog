@@ -8,7 +8,7 @@ export default async function FeaturedPosts() {
 
   return (
     <section>
-      <h2 className="text-2xl font-bold">Featured Posts</h2>
+      <h2 className="text-2xl font-bold my-2">Featured Posts</h2>
       <GridPosts posts={posts} />
     </section>
   );
