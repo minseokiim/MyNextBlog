@@ -1,3 +1,9 @@
-export default function Contact() {
-  return <p>연락하기!</p>;
+import Contact from "@/components/Contact";
+
+export default function ContactPage() {
+  return (
+    <>
+      <Contact />
+    </>
+  );
 }

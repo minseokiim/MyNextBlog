@@ -1,3 +1,11 @@
+import Info from "@/components/Info";
+import Main from "@/components/Main";
+
 export default function About() {
-  return <p>나에대해!</p>;
+  return (
+    <>
+      <Main />
+      <Info />
+    </>
+  );
 }
