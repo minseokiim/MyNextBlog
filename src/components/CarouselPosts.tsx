@@ -5,9 +5,10 @@ import MultiCarousel from "./MultiCarousel";
 
 export default async function CarouselPosts() {
   const posts = await getNonFeaturedPosts();
+
   return (
     <section className="my-4">
-      <h2 className="text-2xl font-bold my-2">NonFeaturedPosts</h2>
+      <h2 className="text-2xl font-bold my-2">NonFeatured Posts</h2>
       <MultiCarousel>
         {posts.map((post) => (
           <CardPost key={post.path} post={post} />
