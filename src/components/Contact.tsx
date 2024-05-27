@@ -21,7 +21,9 @@ export default function Contact() {
             key={index}
             href={link.url}
             target="_blank"
+            // _blank: 새로운 탭에서 열기 <-> _self: 현재 탭에서 열기
             rel="noreferrer"
+            // noreferrer : 참조자 정보 누출 x ,noopener: 액세스 권한 없이 새 탭에서 열기
             className="text-5xl hover:text-green-400"
           >
             {link.icon}
