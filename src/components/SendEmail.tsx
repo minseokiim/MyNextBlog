@@ -9,12 +9,14 @@ type Form = {
   message: string;
 };
 
+const DEFAULT_DATA = {
+  from: "",
+  subject: "",
+  message: "",
+};
+
 export default function SendEmail() {
-  const [form, setForm] = useState<Form>({
-    from: "",
-    subject: "",
-    message: "",
-  });
+  const [form, setForm] = useState<Form>(DEFAULT_DATA);
 
   const [banner, setBanner] = useState<BannerData | null>(null);
 
@@ -26,12 +28,19 @@ export default function SendEmail() {
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(form);
-    sendContactEmail(form);
-    //성공시에 처리해주기
-    setBanner({ message: "보내기 성공 !", state: "success" });
-    setTimeout(() => {
-      setBanner(null);
-    }, 3000);
+    sendContactEmail(form)
+      .then(() => {
+        setBanner({ message: "메일 보내기 성공 !", state: "success" });
+        setForm(DEFAULT_DATA);
+      })
+      .catch(() => {
+        setBanner({ message: "메일 보내기 실패 ㅠㅠ", state: "failed" });
+      })
+      .finally(() => {
+        setTimeout(() => {
+          setBanner(null);
+        }, 3000);
+      });
   };
 
   return (

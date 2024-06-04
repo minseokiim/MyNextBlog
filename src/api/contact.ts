@@ -1,7 +1,7 @@
 import { EmailData } from "./email";
 
 export async function sendContactEmail(email: EmailData) {
-  //이메일 요청을 보내는 함수
+  //Next API 라우트로 이메일 요청을 보내는 함수
   const response = await fetch("/api/contact", {
     method: "POST",
     body: JSON.stringify(email),
