@@ -1,6 +1,7 @@
 "use client";
 import React, { ChangeEvent, FormEvent, useState } from "react";
 import Banner, { BannerData } from "./Banner";
+import { sendContactEmail } from "@/api/contact";
 
 type Form = {
   from: string;
@@ -25,6 +26,8 @@ export default function SendEmail() {
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(form);
+    sendContactEmail(form);
+    //성공시에 처리해주기
     setBanner({ message: "보내기 성공 !", state: "success" });
     setTimeout(() => {
       setBanner(null);
@@ -32,7 +35,7 @@ export default function SendEmail() {
   };
 
   return (
-    <section className="max-w-md">
+    <section className="w-96">
       {banner && <Banner banner={banner} />}
 
       <form
