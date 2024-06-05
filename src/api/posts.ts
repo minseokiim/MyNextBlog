@@ -3,7 +3,7 @@
 
 import { readFile } from "fs/promises";
 import path from "path";
-import { metadata } from "./../app/layout";
+import { cache } from "react";
 
 export type Post = {
   title: string;
@@ -20,12 +20,14 @@ export type PostData = Post & {
   prev: Post | null;
 };
 
-export async function getAllPosts(): Promise<Post[]> {
+//* cache : 중복된 데이터 요청 제거 가능 ! fetch는 자동으로 되므로 이럴 필요 없음
+export const getAllPosts = cache(async () => {
   const filePath = path.join(process.cwd(), "data", "posts.json");
+
   return readFile(filePath, "utf-8")
     .then<Post[]>(JSON.parse)
     .then((posts) => posts.sort((a, b) => (a.date > b.date ? -1 : 1)));
-}
+});
 
 export async function getFeaturedPosts(): Promise<Post[]> {
   return getAllPosts().then((posts) => posts.filter((post) => post.featured));
