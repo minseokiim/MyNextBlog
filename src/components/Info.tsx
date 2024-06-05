@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 
 const TitleClass = "text-2xl font-bold my-2 text-gray-800";

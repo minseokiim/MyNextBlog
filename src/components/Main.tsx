@@ -1,8 +1,8 @@
-"use client";
 import React from "react";
 import profileImage from "../../public/images/profile.jpg";
 import Image from "next/image";
 import Link from "next/link";
+
 export default function Main() {
   return (
     <section className="text-center">

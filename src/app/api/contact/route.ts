@@ -22,7 +22,7 @@ export async function POST(req: Request) {
 
   const { from, subject, message } = body;
 
-  //노드메일러 통해 메일 보내rl
+  //노드메일러 통해 메일 보내기
   return sendEmail(body)
     .then(
       () =>

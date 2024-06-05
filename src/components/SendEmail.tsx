@@ -28,6 +28,7 @@ export default function SendEmail() {
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(form);
+
     sendContactEmail(form)
       .then(() => {
         setBanner({ message: "메일 보내기 성공 !", state: "success" });
