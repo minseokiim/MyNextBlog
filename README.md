@@ -1,7 +1,4 @@
-<img width="950" alt="image" src="https://github.com/user-attachments/assets/e168d0ad-f245-4595-ad97-df8e8ada2920">
-<img width="1100" alt="image" src="https://github.com/user-attachments/assets/edb0f51b-d2c7-4fb3-a94c-e9a150894543">
-
-<br/><br/>
+<img width="950" alt="image" src="https://github.com/user-attachments/assets/e168d0ad-f245-4595-ad97-df8e8ada2920"><br/>
 
 ### ☘️Stack
 
@@ -10,6 +7,10 @@
 - **CSS:** Tailwind CSS <br/>
 - **Email Handling:** Nodemailer <br/>
 <br/>
+
+
+<img width="1100" alt="image" src="https://github.com/user-attachments/assets/edb0f51b-d2c7-4fb3-a94c-e9a150894543">
+<br/><br/>
 
 
 ### ☘️Others
@@ -22,3 +23,6 @@
 ### ☘️Getting Started
 
 npm run dev
+<br/><br/>
+
+
